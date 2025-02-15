@@ -4,6 +4,7 @@ import com.example.demo.model.Post;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -12,9 +13,9 @@ import java.util.List;
 public class PostService {
     public List<Post> listAllPosts(){
         List<Post> posts = new ArrayList<>();
-        posts.add(new Post("Первый пост", 15));
-        posts.add(new Post("Второй пост", 29));
-        posts.add(new Post("Третий пост", 8));
+        posts.add(new Post("Первый пост", 15, new Date()));
+        posts.add(new Post("Второй пост", 29, new Date()));
+        posts.add(new Post("Третий пост", 8, new Date()));
         return posts;
     }
 }
