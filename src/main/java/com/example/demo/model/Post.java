@@ -1,8 +1,16 @@
 package com.example.demo.model;
 
-import java.util.Date;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jdk.jfr.Enabled;
 
+import java.util.Date;
+@Entity
 public class Post {
+    @Id
+
     private Long id;
     private String text;
     private Integer likes;
