@@ -3,11 +3,13 @@ package com.example.demo.model;
 import java.util.Date;
 
 public class Post {
+    private Long id;
     private String text;
     private Integer likes;
     private Date creationDate;
 
-    public Post(String text, Integer likes, Date creationDate){
+    public Post(Long id, String text, Integer likes, Date creationDate){
+        this.id = id;
         this.text = text;
         this.likes = likes;
         this.creationDate = creationDate;
@@ -15,6 +17,10 @@ public class Post {
     public Post(){
 
     }
+    public void setId(Long id){
+        this.id = id;
+    }
+
 
     public void setText(String text){
         this.text = text;
@@ -28,6 +34,9 @@ public class Post {
 
     public String getText(){
         return text;
+    }
+    public Long getId(){
+        return id;
     }
     public Integer getLikes(){
         return likes;

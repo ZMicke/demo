@@ -16,9 +16,9 @@ public class PostService {
 
     // Инициализация стартовыми постами
     static {
-        posts.add(new Post("Первый пост", 15, new Date()));
-        posts.add(new Post("Второй пост", 29, new Date()));
-        posts.add(new Post("Третий пост", 8, new Date()));
+        posts.add(new Post(0L, "Первый пост", 15, new Date()));
+        posts.add(new Post(1L, "Второй пост", 29, new Date()));
+        posts.add(new Post(2L, "Третий пост", 8, new Date()));
     }
 
     public static List<Post> listAllPosts() {
@@ -28,6 +28,7 @@ public class PostService {
     public static void create(String text) {
 
         Post newPost = new Post();
+        newPost.setId((long) posts.size());
         newPost.setText(text);
         newPost.setLikes(0);
         newPost.setCreationDate(new Date());
